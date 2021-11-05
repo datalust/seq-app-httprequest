@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
+using System.Text;
 using Seq.App.Http.Encoding;
 using Seq.App.Http.Templates;
 using Serilog.Events;
+using Serilog.Formatting;
 
 namespace Seq.App.Http
 {
@@ -14,6 +16,7 @@ namespace Seq.App.Http
         readonly ExpressionTemplate _url, _body;
         readonly HttpMethod _method;
         readonly List<(string, string)> _headers;
+        readonly System.Text.Encoding _utf8 = new UTF8Encoding(false);
 
         public HttpRequestMessageFactory(string? url, HttpMethodSetting method, string? body, string? mediaType, string? authenticationHeader, string? otherHeaders)
         {
@@ -39,6 +42,26 @@ namespace Seq.App.Http
 
         public HttpRequestMessage FromEvent(LogEvent evt)
         {
+            var url = Format(_url, evt);
+            var body = Format(_body, evt);
+            var message = new HttpRequestMessage(_method, url)
+            {
+                Content = new StringContent(body, _utf8, _mediaType)
+            };
+
+            foreach (var (name, value) in _headers)
+            {
+                message.Headers.Add(name, value);
+            }
+
+            return message;
+        }
+
+        static string Format(ITextFormatter template, LogEvent evt)
+        {
+            var writer = new StringWriter();
+            template.Format(evt, writer);
+            return writer.ToString();
         }
     }
 
