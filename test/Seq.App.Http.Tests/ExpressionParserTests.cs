@@ -1,8 +1,8 @@
 ﻿using System;
-using Serilog.Expressions.Parsing;
+using Seq.App.Http.Expressions.Parsing;
 using Xunit;
 
-namespace Serilog.Expressions.Tests
+namespace Seq.App.Http.Tests
 {
     public class ExpressionParserTests
     {

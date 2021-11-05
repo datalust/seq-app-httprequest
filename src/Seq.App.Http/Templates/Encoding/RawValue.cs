@@ -1,7 +1,7 @@
 ﻿using System;
 using Serilog.Events;
 
-namespace Serilog.Templates.Encoding
+namespace Seq.App.Http.Templates.Encoding
 {
     class PreEncodedValue
     {

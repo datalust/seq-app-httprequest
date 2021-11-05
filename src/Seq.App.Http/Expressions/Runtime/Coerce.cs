@@ -17,7 +17,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Serilog.Events;
 
-namespace Serilog.Expressions.Runtime
+namespace Seq.App.Http.Expressions.Runtime
 {
     static class Coerce
     {

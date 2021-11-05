@@ -13,9 +13,9 @@
 // limitations under the License.
 
 using System.Collections.Generic;
-using Serilog.Expressions.Ast;
+using Seq.App.Http.Expressions.Ast;
 
-namespace Serilog.Expressions.Compilation.Transformations
+namespace Seq.App.Http.Expressions.Compilation.Transformations
 {
     class IdentityTransformer : SerilogExpressionTransformer<Expression>
     {

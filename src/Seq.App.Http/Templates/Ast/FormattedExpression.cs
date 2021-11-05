@@ -13,10 +13,10 @@
 // limitations under the License.
 
 using System;
-using Serilog.Expressions.Ast;
+using Seq.App.Http.Expressions.Ast;
 using Serilog.Parsing;
 
-namespace Serilog.Templates.Ast
+namespace Seq.App.Http.Templates.Ast
 {
     class FormattedExpression : Template
     {

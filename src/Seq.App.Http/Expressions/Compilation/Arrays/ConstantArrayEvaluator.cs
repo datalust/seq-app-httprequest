@@ -13,11 +13,11 @@
 // limitations under the License.
 
 using System.Linq;
+using Seq.App.Http.Expressions.Ast;
+using Seq.App.Http.Expressions.Compilation.Transformations;
 using Serilog.Events;
-using Serilog.Expressions.Ast;
-using Serilog.Expressions.Compilation.Transformations;
 
-namespace Serilog.Expressions.Compilation.Arrays
+namespace Seq.App.Http.Expressions.Compilation.Arrays
 {
     class ConstantArrayEvaluator : IdentityTransformer
     {

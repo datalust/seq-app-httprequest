@@ -16,7 +16,7 @@ using Serilog.Events;
 
 // ReSharper disable StringLiteralTypo
 
-namespace Serilog.Templates.Rendering
+namespace Seq.App.Http.Templates.Rendering
 {
     /// <summary>
     /// Implements the {Level} element.

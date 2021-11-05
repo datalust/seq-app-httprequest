@@ -16,7 +16,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using Serilog.Events;
 
-namespace Serilog.Expressions.Compilation.Linq
+namespace Seq.App.Http.Expressions.Compilation.Linq
 {
     class ExpressionConstantMapper : ExpressionVisitor
     {

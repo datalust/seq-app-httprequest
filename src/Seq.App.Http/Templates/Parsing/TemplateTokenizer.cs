@@ -13,11 +13,11 @@
 // limitations under the License.
 
 using System.Collections.Generic;
-using Serilog.Expressions.Parsing;
+using Seq.App.Http.Expressions.Parsing;
 using Superpower;
 using Superpower.Model;
 
-namespace Serilog.Templates.Parsing
+namespace Seq.App.Http.Templates.Parsing
 {
     class TemplateTokenizer : Tokenizer<ExpressionToken>
     {

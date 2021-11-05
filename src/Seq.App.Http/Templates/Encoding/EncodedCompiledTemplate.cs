@@ -1,8 +1,8 @@
 ﻿using System.IO;
-using Serilog.Expressions;
-using Serilog.Templates.Compilation;
+using Seq.App.Http.Expressions;
+using Seq.App.Http.Templates.Compilation;
 
-namespace Serilog.Templates.Encoding
+namespace Seq.App.Http.Templates.Encoding
 {
     class EncodedCompiledTemplate : CompiledTemplate
     {

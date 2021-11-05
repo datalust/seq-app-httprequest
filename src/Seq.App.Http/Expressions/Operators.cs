@@ -14,11 +14,11 @@
 
 using System;
 using System.Collections.Generic;
-using Serilog.Expressions.Ast;
+using Seq.App.Http.Expressions.Ast;
 
 // ReSharper disable InconsistentNaming, MemberCanBePrivate.Global
 
-namespace Serilog.Expressions
+namespace Seq.App.Http.Expressions
 {
     static class Operators
     {

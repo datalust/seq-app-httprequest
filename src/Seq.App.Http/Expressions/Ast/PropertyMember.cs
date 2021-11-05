@@ -14,7 +14,7 @@
 
 using Serilog.Events;
 
-namespace Serilog.Expressions.Ast
+namespace Seq.App.Http.Expressions.Ast
 {
     class PropertyMember : Member
     {

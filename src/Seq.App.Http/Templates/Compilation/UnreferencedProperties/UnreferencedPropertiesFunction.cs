@@ -17,13 +17,13 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
+using Seq.App.Http.Expressions;
+using Seq.App.Http.Expressions.Runtime;
+using Seq.App.Http.Templates.Ast;
 using Serilog.Events;
-using Serilog.Expressions;
-using Serilog.Expressions.Runtime;
 using Serilog.Parsing;
-using Serilog.Templates.Ast;
 
-namespace Serilog.Templates.Compilation.UnreferencedProperties
+namespace Seq.App.Http.Templates.Compilation.UnreferencedProperties
 {
     /// <summary>
     /// This little extension implements the <c>rest()</c> function in expression templates. It's based on

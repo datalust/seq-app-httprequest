@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using Serilog;
 using Serilog.Events;
 using Xunit.Sdk;
 
-namespace Serilog.Expressions.Tests.Support
+namespace Seq.App.Http.Tests.Support
 {
     static class Some
     {

@@ -13,10 +13,10 @@
 // limitations under the License.
 
 using System.Diagnostics.CodeAnalysis;
+using Seq.App.Http.Expressions.Ast;
 using Serilog.Events;
-using Serilog.Expressions.Ast;
 
-namespace Serilog.Expressions.Compilation
+namespace Seq.App.Http.Expressions.Compilation
 {
     static class Pattern
     {

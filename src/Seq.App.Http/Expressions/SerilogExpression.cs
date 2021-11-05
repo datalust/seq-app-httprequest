@@ -16,12 +16,12 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
-using Serilog.Expressions.Compilation;
-using Serilog.Expressions.Parsing;
+using Seq.App.Http.Expressions.Compilation;
+using Seq.App.Http.Expressions.Parsing;
 
 // ReSharper disable MemberCanBePrivate.Global
 
-namespace Serilog.Expressions
+namespace Seq.App.Http.Expressions
 {
     /// <summary>
     /// Helper methods to assist with construction of well-formed expressions.

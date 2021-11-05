@@ -4,7 +4,7 @@
     <Description>Send events and notifications from Seq to a remote HTTP/REST/WebHook endpoint.</Description>
     <VersionPrefix>1.0.0</VersionPrefix>
     <Authors>Serilog Contributors, Datalust</Authors>
-    <TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
+    <TargetFramework>net5.0</TargetFramework>
     <PackageTags>seq-app</PackageTags>
     <PackageProjectUrl>https://github.com/datalust/seq-app-http</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
@@ -12,10 +12,14 @@
     <RepositoryUrl>https://github.com/datalust/seq-app-http</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <LangVersion>9</LangVersion>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <InternalsVisibleTo Include="Seq.App.Http.Tests" />
+  </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Serilog" Version="2.10.0" />
     <PackageReference Include="Nullable" Version="1.3.0" PrivateAssets="All" />
     <PackageReference Include="Superpower" Version="3.0.0" />
     <PackageReference Include="Seq.Apps" Version="5.1.0" />

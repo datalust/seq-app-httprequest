@@ -14,9 +14,9 @@
 
 using System;
 using System.Diagnostics.CodeAnalysis;
-using Serilog.Expressions.Ast;
+using Seq.App.Http.Expressions.Ast;
 
-namespace Serilog.Expressions.Parsing
+namespace Seq.App.Http.Expressions.Parsing
 {
     class ExpressionParser
     {

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-namespace Serilog.Expressions
+namespace Seq.App.Http.Expressions
 {
     // See https://github.com/serilog/serilog-formatting-compact#reified-properties
     static class BuiltInProperty

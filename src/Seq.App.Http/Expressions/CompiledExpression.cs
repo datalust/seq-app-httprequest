@@ -14,7 +14,7 @@
 
 using Serilog.Events;
 
-namespace Serilog.Expressions
+namespace Seq.App.Http.Expressions
 {
     /// <summary>
     /// A compiled expression evaluated against a <see cref="LogEvent"/>.

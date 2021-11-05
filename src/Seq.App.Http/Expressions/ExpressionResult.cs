@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Seq.App.Http.Expressions.Runtime;
 using Serilog.Events;
-using Serilog.Expressions.Runtime;
 
-namespace Serilog.Expressions
+namespace Seq.App.Http.Expressions
 {
     /// <summary>
     /// Helper functions for working with the results of evaluating expressions.

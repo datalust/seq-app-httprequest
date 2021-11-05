@@ -1,13 +1,13 @@
 ﻿using System;
 using System.IO;
 using System.Threading;
+using Seq.App.Http.Expressions;
+using Seq.App.Http.Expressions.Runtime;
+using Seq.App.Http.Templates.Compilation;
 using Serilog.Events;
-using Serilog.Expressions;
-using Serilog.Expressions.Runtime;
 using Serilog.Parsing;
-using Serilog.Templates.Compilation;
 
-namespace Serilog.Templates.Encoding
+namespace Seq.App.Http.Templates.Encoding
 {
     class EscapableEncodedCompiledFormattedExpression : CompiledTemplate
     {

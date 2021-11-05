@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Seq.App.Http.Expressions;
+using Seq.App.Http.Templates;
+using Seq.App.Http.Tests.Support;
+using Serilog;
 using Serilog.Events;
-using Serilog.Expressions.Tests.Support;
 using Serilog.Formatting;
 using Serilog.Formatting.Compact;
 using Serilog.Formatting.Json;
 using Serilog.Parsing;
-using Serilog.Templates;
 using Xunit;
 
-namespace Serilog.Expressions.Tests
+namespace Seq.App.Http.Tests
 {
     /// <summary>
     /// These tests track the ability of Seq.App.Http to faithfully reproduce the JSON formats implemented in

@@ -16,7 +16,7 @@ using System;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Serilog.Expressions.Compilation.Linq
+namespace Seq.App.Http.Expressions.Compilation.Linq
 {
     class ParameterReplacementVisitor : ExpressionVisitor
     {

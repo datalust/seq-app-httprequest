@@ -14,7 +14,7 @@
 
 using System;
 
-namespace Serilog.Expressions.Ast
+namespace Seq.App.Http.Expressions.Ast
 {
     class LocalNameExpression : Expression
     {

@@ -1,4 +1,4 @@
-﻿namespace Serilog.Templates.Encoding
+﻿namespace Seq.App.Http.Templates.Encoding
 {
     /// <summary>
     /// An encoder applied to the output substituted into template holes.

@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using Seq.App.Http.Expressions;
+using Seq.App.Http.Expressions.Runtime;
+using Seq.App.Http.Tests.Support;
 using Serilog.Events;
-using Serilog.Expressions.Runtime;
-using Serilog.Expressions.Tests.Support;
 using Xunit;
 
-namespace Serilog.Expressions.Tests
+namespace Seq.App.Http.Tests
 {
     public class ExpressionEvaluationTests
     {

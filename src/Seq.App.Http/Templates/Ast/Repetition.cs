@@ -13,9 +13,9 @@
 // limitations under the License.
 
 using System;
-using Serilog.Expressions.Ast;
+using Seq.App.Http.Expressions.Ast;
 
-namespace Serilog.Templates.Ast
+namespace Seq.App.Http.Templates.Ast
 {
     class Repetition: Template
     {

@@ -18,7 +18,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 
-namespace Serilog.Expressions
+namespace Seq.App.Http.Expressions
 {
     /// <summary>
     /// A <see cref="NameResolver"/> that matches public static members of a class by name.

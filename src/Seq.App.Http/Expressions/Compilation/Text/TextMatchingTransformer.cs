@@ -14,12 +14,12 @@
 
 using System;
 using System.Text.RegularExpressions;
+using Seq.App.Http.Expressions.Ast;
+using Seq.App.Http.Expressions.Compilation.Transformations;
 using Serilog.Debugging;
 using Serilog.Events;
-using Serilog.Expressions.Ast;
-using Serilog.Expressions.Compilation.Transformations;
 
-namespace Serilog.Expressions.Compilation.Text
+namespace Seq.App.Http.Expressions.Compilation.Text
 {
     class TextMatchingTransformer: IdentityTransformer
     {

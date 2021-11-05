@@ -14,9 +14,9 @@
 
 using System;
 using System.Diagnostics.CodeAnalysis;
-using Serilog.Templates.Ast;
+using Seq.App.Http.Templates.Ast;
 
-namespace Serilog.Templates.Parsing
+namespace Seq.App.Http.Templates.Parsing
 {
     class TemplateParser
     {

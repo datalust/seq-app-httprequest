@@ -1,9 +1,9 @@
-﻿using Serilog.Core;
-using Serilog.Events;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Serilog.Core;
+using Serilog.Events;
 
-namespace Serilog.Expressions.Tests.Support
+namespace Seq.App.Http.Tests.Support
 {
     class CollectingSink : ILogEventSink
     {

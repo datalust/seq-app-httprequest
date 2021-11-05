@@ -1,12 +1,12 @@
 ﻿using System;
+using Seq.App.Http.Templates.Ast;
+using Seq.App.Http.Templates.Compilation.UnreferencedProperties;
+using Seq.App.Http.Templates.Parsing;
 using Serilog.Events;
 using Serilog.Parsing;
-using Serilog.Templates.Ast;
-using Serilog.Templates.Compilation.UnreferencedProperties;
-using Serilog.Templates.Parsing;
 using Xunit;
 
-namespace Serilog.Expressions.Tests.Templates
+namespace Seq.App.Http.Tests.Templates
 {
     public class UnreferencedPropertiesFunctionTests
     {

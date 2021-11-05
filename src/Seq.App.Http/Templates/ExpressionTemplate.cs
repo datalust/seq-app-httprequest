@@ -15,16 +15,17 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
+using Seq.App.Http.Expressions;
+using Seq.App.Http.Templates.Compilation;
+using Seq.App.Http.Templates.Compilation.NameResolution;
+using Seq.App.Http.Templates.Encoding;
+using Seq.App.Http.Templates.Parsing;
 using Serilog.Events;
-using Serilog.Expressions;
 using Serilog.Formatting;
-using Serilog.Templates.Compilation;
-using Serilog.Templates.Compilation.NameResolution;
-using Serilog.Templates.Encoding;
-using Serilog.Templates.Parsing;
+
 // ReSharper disable MemberCanBePrivate.Global, UnusedMember.Global
 
-namespace Serilog.Templates
+namespace Seq.App.Http.Templates
 {
     /// <summary>
     /// Formats <see cref="LogEvent"/>s into text using embedded expressions.

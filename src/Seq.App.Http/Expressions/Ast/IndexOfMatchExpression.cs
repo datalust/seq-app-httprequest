@@ -15,7 +15,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace Serilog.Expressions.Ast
+namespace Seq.App.Http.Expressions.Ast
 {
     class IndexOfMatchExpression : Expression
     {

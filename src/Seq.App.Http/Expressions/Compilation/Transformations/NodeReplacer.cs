@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Serilog.Expressions.Ast;
+using Seq.App.Http.Expressions.Ast;
 
-namespace Serilog.Expressions.Compilation.Transformations
+namespace Seq.App.Http.Expressions.Compilation.Transformations
 {
     class NodeReplacer : IdentityTransformer
     {

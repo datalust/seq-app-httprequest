@@ -1,12 +1,12 @@
 ﻿using System;
+using Seq.App.Http.Expressions;
+using Seq.App.Http.Tests.Support;
 using Serilog.Events;
-using System.Linq;
-using Serilog.Expressions.Tests.Support;
 using Xunit;
 
 // ReSharper disable CoVariantArrayConversion
 
-namespace Serilog.Expressions.Tests
+namespace Seq.App.Http.Tests
 {
     public class ExpressionCompilerTests
     {

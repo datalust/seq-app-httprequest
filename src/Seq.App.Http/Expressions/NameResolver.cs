@@ -17,7 +17,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using Serilog.Events;
 
-namespace Serilog.Expressions
+namespace Seq.App.Http.Expressions
 {
     /// <summary>
     /// Looks up the implementations of functions that appear in expressions.

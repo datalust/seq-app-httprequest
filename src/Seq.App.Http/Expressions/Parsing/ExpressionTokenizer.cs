@@ -17,7 +17,7 @@ using System.Linq;
 using Superpower;
 using Superpower.Model;
 
-namespace Serilog.Expressions.Parsing
+namespace Seq.App.Http.Expressions.Parsing
 {
     class ExpressionTokenizer : Tokenizer<ExpressionToken>
     {

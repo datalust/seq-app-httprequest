@@ -18,8 +18,8 @@ Instances of the app support the following properties.
 | --- | --- | --- |
 | **URL** | The target URL. May include template substitutions based on event properties, for example, `https://api.example.com/notify?to={Email}`. Placeholders in templates will be URI-encoded. | |
 | **Method** | The HTTP method to use. | `POST` |
-| **Body** | The request body to send. Template based on event properties, supporting plain text and JSON. | |
-| **Media Type** | Media type describing the body | `text/plain` |
+| **Body** | The request body to send. Template based on event properties. | |
+| **Media Type** | Media type describing the body. | |
 | **Authentication Header** | An optional `Name: Value` header, stored as sensitive data, for authentication purposes. | |
 | **Other Headers** | Additional headers to send with the request, one per line in `Name: Value` format. | |
 | **Extended Error Diagnostics** | Whether or not to include outbound request bodies, URLs, etc., and response bodies when requests fail. | `false` |

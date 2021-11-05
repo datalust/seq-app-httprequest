@@ -15,7 +15,7 @@
 using System;
 using System.Linq;
 
-namespace Serilog.Expressions.Ast
+namespace Seq.App.Http.Expressions.Ast
 {
     class CallExpression : Expression
     {

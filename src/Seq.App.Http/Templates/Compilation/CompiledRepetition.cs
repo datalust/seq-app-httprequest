@@ -13,11 +13,11 @@
 // limitations under the License.
 
 using System.IO;
+using Seq.App.Http.Expressions;
+using Seq.App.Http.Expressions.Runtime;
 using Serilog.Events;
-using Serilog.Expressions;
-using Serilog.Expressions.Runtime;
 
-namespace Serilog.Templates.Compilation
+namespace Seq.App.Http.Templates.Compilation
 {
     class CompiledRepetition : CompiledTemplate
     {

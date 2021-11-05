@@ -14,7 +14,7 @@
 
 using Serilog.Events;
 
-namespace Serilog.Expressions
+namespace Seq.App.Http.Expressions
 {
     delegate LogEventPropertyValue? Evaluatable(EvaluationContext ctx);
 }

@@ -17,7 +17,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 
-namespace Serilog.Expressions.Compilation
+namespace Seq.App.Http.Expressions.Compilation
 {
     class OrderedNameResolver : NameResolver
     {

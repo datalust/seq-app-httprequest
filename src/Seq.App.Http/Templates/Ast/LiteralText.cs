@@ -14,7 +14,7 @@
 
 using System;
 
-namespace Serilog.Templates.Ast
+namespace Seq.App.Http.Templates.Ast
 {
     class LiteralText : Template
     {

@@ -16,7 +16,7 @@ using Superpower;
 using Superpower.Model;
 using Superpower.Parsers;
 
-namespace Serilog.Expressions.Parsing
+namespace Seq.App.Http.Expressions.Parsing
 {
     static class ExpressionTextParsers
     {

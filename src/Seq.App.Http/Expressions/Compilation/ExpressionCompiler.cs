@@ -13,15 +13,15 @@
 // limitations under the License.
 
 using System;
-using Serilog.Expressions.Ast;
-using Serilog.Expressions.Compilation.Arrays;
-using Serilog.Expressions.Compilation.Linq;
-using Serilog.Expressions.Compilation.Properties;
-using Serilog.Expressions.Compilation.Text;
-using Serilog.Expressions.Compilation.Variadics;
-using Serilog.Expressions.Compilation.Wildcards;
+using Seq.App.Http.Expressions.Ast;
+using Seq.App.Http.Expressions.Compilation.Arrays;
+using Seq.App.Http.Expressions.Compilation.Linq;
+using Seq.App.Http.Expressions.Compilation.Properties;
+using Seq.App.Http.Expressions.Compilation.Text;
+using Seq.App.Http.Expressions.Compilation.Variadics;
+using Seq.App.Http.Expressions.Compilation.Wildcards;
 
-namespace Serilog.Expressions.Compilation
+namespace Seq.App.Http.Expressions.Compilation
 {
     static class ExpressionCompiler
     {

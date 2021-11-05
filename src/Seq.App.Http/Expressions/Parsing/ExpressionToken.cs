@@ -14,7 +14,7 @@
 
 using Superpower.Display;
 
-namespace Serilog.Expressions.Parsing
+namespace Seq.App.Http.Expressions.Parsing
 {
     enum ExpressionToken
     {

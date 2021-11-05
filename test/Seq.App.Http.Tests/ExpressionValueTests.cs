@@ -1,7 +1,8 @@
-﻿using Serilog.Events;
+﻿using Seq.App.Http.Expressions;
+using Serilog.Events;
 using Xunit;
 
-namespace Serilog.Expressions.Tests
+namespace Seq.App.Http.Tests
 {
     public class ExpressionValueTests
     {

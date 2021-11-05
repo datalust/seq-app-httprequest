@@ -16,7 +16,7 @@
 
 using System;
 
-namespace Seq.App.Http
+namespace Seq.App.Http.Expressions
 {
     /// <summary>
     /// Helper methods.

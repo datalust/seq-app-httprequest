@@ -16,7 +16,7 @@ using System.IO;
 using System.Linq;
 using Serilog.Parsing;
 
-namespace Serilog.Templates.Rendering
+namespace Seq.App.Http.Templates.Rendering
 {
     static class Padding
     {

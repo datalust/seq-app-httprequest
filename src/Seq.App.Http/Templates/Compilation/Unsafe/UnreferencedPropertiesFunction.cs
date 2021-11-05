@@ -13,18 +13,13 @@
 // limitations under the License.
 
 using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using System.Reflection;
+using Seq.App.Http.Expressions;
+using Seq.App.Http.Templates.Encoding;
 using Serilog.Events;
-using Serilog.Expressions;
-using Serilog.Expressions.Runtime;
-using Serilog.Parsing;
-using Serilog.Templates.Ast;
-using Serilog.Templates.Encoding;
 
-namespace Serilog.Templates.Compilation.Unsafe
+namespace Seq.App.Http.Templates.Compilation.Unsafe
 {
     /// <summary>
     /// This little extension implements the <c>rest()</c> function in expression templates. It's based on

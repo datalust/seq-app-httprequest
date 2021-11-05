@@ -19,18 +19,18 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using Seq.App.Http.Expressions.Ast;
+using Seq.App.Http.Expressions.Compilation.Transformations;
+using Seq.App.Http.Templates.Compilation;
 using Serilog.Events;
-using Serilog.Expressions.Ast;
-using Serilog.Expressions.Compilation.Transformations;
-using Serilog.Templates.Compilation;
-using ConstantExpression = Serilog.Expressions.Ast.ConstantExpression;
-using Expression = Serilog.Expressions.Ast.Expression;
+using ConstantExpression = Seq.App.Http.Expressions.Ast.ConstantExpression;
+using Expression = Seq.App.Http.Expressions.Ast.Expression;
 using ParameterExpression = System.Linq.Expressions.ParameterExpression;
 using LX = System.Linq.Expressions.Expression;
 using ExpressionBody = System.Linq.Expressions.Expression;
 // ReSharper disable UseIndexFromEndExpression
 
-namespace Serilog.Expressions.Compilation.Linq
+namespace Seq.App.Http.Expressions.Compilation.Linq
 {
     class LinqExpressionCompiler : SerilogExpressionTransformer<ExpressionBody>
     {

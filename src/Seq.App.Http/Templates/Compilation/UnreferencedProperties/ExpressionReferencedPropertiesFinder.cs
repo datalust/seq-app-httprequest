@@ -14,10 +14,10 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using Serilog.Expressions.Ast;
-using Serilog.Expressions.Compilation.Transformations;
+using Seq.App.Http.Expressions.Ast;
+using Seq.App.Http.Expressions.Compilation.Transformations;
 
-namespace Serilog.Templates.Compilation.UnreferencedProperties
+namespace Seq.App.Http.Templates.Compilation.UnreferencedProperties
 {
     class ExpressionReferencedPropertiesFinder : SerilogExpressionTransformer<IEnumerable<string>>
     {

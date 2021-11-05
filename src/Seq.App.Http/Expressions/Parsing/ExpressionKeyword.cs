@@ -14,7 +14,7 @@
 
 using System;
 
-namespace Serilog.Expressions.Parsing
+namespace Seq.App.Http.Expressions.Parsing
 {
     readonly struct ExpressionKeyword
     {

@@ -1,11 +1,12 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
+using Seq.App.Http.Expressions;
+using Seq.App.Http.Expressions.Runtime;
+using Seq.App.Http.Tests.Support;
 using Serilog.Events;
-using Serilog.Expressions.Runtime;
-using Serilog.Expressions.Tests.Support;
 using Xunit;
 
-namespace Serilog.Expressions.Tests.Expressions
+namespace Seq.App.Http.Tests.Expressions
 {
     public class NameResolverTests
     {

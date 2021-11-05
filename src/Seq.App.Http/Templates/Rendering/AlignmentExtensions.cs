@@ -14,7 +14,7 @@
 
 using Serilog.Parsing;
 
-namespace Serilog.Templates.Rendering
+namespace Seq.App.Http.Templates.Rendering
 {
     static class AlignmentExtensions
     {

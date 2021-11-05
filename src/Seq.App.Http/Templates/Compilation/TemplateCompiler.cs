@@ -14,13 +14,13 @@
 
 using System;
 using System.Linq;
-using Serilog.Expressions;
-using Serilog.Expressions.Ast;
-using Serilog.Expressions.Compilation;
-using Serilog.Templates.Ast;
-using Serilog.Templates.Encoding;
+using Seq.App.Http.Expressions;
+using Seq.App.Http.Expressions.Ast;
+using Seq.App.Http.Expressions.Compilation;
+using Seq.App.Http.Templates.Ast;
+using Seq.App.Http.Templates.Encoding;
 
-namespace Serilog.Templates.Compilation
+namespace Seq.App.Http.Templates.Compilation
 {
     static class TemplateCompiler
     {

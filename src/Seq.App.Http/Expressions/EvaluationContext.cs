@@ -13,10 +13,10 @@
 // limitations under the License.
 
 using System;
+using Seq.App.Http.Expressions.Runtime;
 using Serilog.Events;
-using Serilog.Expressions.Runtime;
 
-namespace Serilog.Expressions
+namespace Seq.App.Http.Expressions
 {
     readonly struct EvaluationContext
     {

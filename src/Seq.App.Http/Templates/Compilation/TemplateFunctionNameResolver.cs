@@ -13,14 +13,14 @@
 // limitations under the License.
 
 using System.Collections.Generic;
-using Serilog.Expressions;
-using Serilog.Expressions.Compilation;
-using Serilog.Expressions.Runtime;
-using Serilog.Templates.Ast;
-using Serilog.Templates.Compilation.UnreferencedProperties;
-using Serilog.Templates.Compilation.Unsafe;
+using Seq.App.Http.Expressions;
+using Seq.App.Http.Expressions.Compilation;
+using Seq.App.Http.Expressions.Runtime;
+using Seq.App.Http.Templates.Ast;
+using Seq.App.Http.Templates.Compilation.UnreferencedProperties;
+using Seq.App.Http.Templates.Compilation.Unsafe;
 
-namespace Serilog.Templates.Compilation
+namespace Seq.App.Http.Templates.Compilation
 {
     static class TemplateFunctionNameResolver
     {

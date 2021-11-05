@@ -1,7 +1,15 @@
-﻿namespace Seq.App.Http
+﻿using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+
+namespace Seq.App.Http
 {
-    abstract class HttpAppClient
+    abstract class HttpAppClient: IDisposable
     {
-        
+        public abstract Task<HttpResponseMessage> SendAsync(HttpRequestMessage message);
+
+        public virtual void Dispose()
+        {
+        }
     }
 }

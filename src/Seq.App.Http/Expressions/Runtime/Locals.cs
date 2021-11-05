@@ -15,7 +15,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Serilog.Events;
 
-namespace Serilog.Expressions.Runtime
+namespace Seq.App.Http.Expressions.Runtime
 {
     /// <summary>
     /// Named local variables. We just look them up by name. The structure is a

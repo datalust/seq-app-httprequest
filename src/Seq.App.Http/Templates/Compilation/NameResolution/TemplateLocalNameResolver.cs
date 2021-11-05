@@ -15,11 +15,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Serilog.Templates.Ast;
+using Seq.App.Http.Templates.Ast;
 
 // ReSharper disable MemberCanBeMadeStatic.Local, SuggestBaseTypeForParameter
 
-namespace Serilog.Templates.Compilation.NameResolution
+namespace Seq.App.Http.Templates.Compilation.NameResolution
 {
     class TemplateLocalNameBinder
     {

@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Serilog.Expressions.Runtime;
+using Seq.App.Http.Expressions.Runtime;
 
-namespace Serilog.Expressions.Compilation
+namespace Seq.App.Http.Expressions.Compilation
 {
     static class DefaultFunctionNameResolver
     {

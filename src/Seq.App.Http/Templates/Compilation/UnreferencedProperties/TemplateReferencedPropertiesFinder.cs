@@ -15,9 +15,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Serilog.Templates.Ast;
+using Seq.App.Http.Templates.Ast;
 
-namespace Serilog.Templates.Compilation.UnreferencedProperties
+namespace Seq.App.Http.Templates.Compilation.UnreferencedProperties
 {
     class TemplateReferencedPropertiesFinder
     {

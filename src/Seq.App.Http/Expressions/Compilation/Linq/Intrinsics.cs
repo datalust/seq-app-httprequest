@@ -18,14 +18,14 @@ using System.Collections.Specialized;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Seq.App.Http.Expressions.Runtime;
+using Seq.App.Http.Templates.Compilation;
 using Serilog.Events;
-using Serilog.Expressions.Runtime;
 using Serilog.Parsing;
-using Serilog.Templates.Compilation;
 
 // ReSharper disable ParameterTypeCanBeEnumerable.Global
 
-namespace Serilog.Expressions.Compilation.Linq
+namespace Seq.App.Http.Expressions.Compilation.Linq
 {
     static class Intrinsics
     {

@@ -13,9 +13,9 @@
 // limitations under the License.
 
 using System;
-using Serilog.Expressions.Ast;
+using Seq.App.Http.Expressions.Ast;
 
-namespace Serilog.Expressions.Compilation.Transformations
+namespace Seq.App.Http.Expressions.Compilation.Transformations
 {
     abstract class SerilogExpressionTransformer<TResult>
     {

@@ -13,9 +13,9 @@
 // limitations under the License.
 
 using System.IO;
-using Serilog.Expressions;
+using Seq.App.Http.Expressions;
 
-namespace Serilog.Templates.Compilation
+namespace Seq.App.Http.Templates.Compilation
 {
     class CompiledExceptionToken : CompiledTemplate
     {

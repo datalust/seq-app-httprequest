@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Serilog.Expressions.Parsing;
-using Serilog.Templates.Parsing;
+using Seq.App.Http.Expressions.Parsing;
+using Seq.App.Http.Templates.Parsing;
 using Xunit;
+using static Seq.App.Http.Expressions.Parsing.ExpressionToken;
 
-using static Serilog.Expressions.Parsing.ExpressionToken;
-
-namespace Serilog.Expressions.Tests
+namespace Seq.App.Http.Tests
 {
     public class TemplateTokenizerTests
     {

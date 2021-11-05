@@ -1,6 +1,6 @@
-﻿using Serilog.Templates.Encoding;
+﻿using Seq.App.Http.Templates.Encoding;
 
-namespace Serilog.Expressions.Tests.Support
+namespace Seq.App.Http.Tests.Support
 {
     public class ParenthesizingEncoder : TemplateOutputEncoder
     {

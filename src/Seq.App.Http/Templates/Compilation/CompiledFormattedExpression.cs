@@ -14,13 +14,13 @@
 
 using System;
 using System.IO;
+using Seq.App.Http.Expressions;
+using Seq.App.Http.Templates.Rendering;
 using Serilog.Events;
-using Serilog.Expressions;
 using Serilog.Formatting.Json;
 using Serilog.Parsing;
-using Serilog.Templates.Rendering;
 
-namespace Serilog.Templates.Compilation
+namespace Seq.App.Http.Templates.Compilation
 {
     class CompiledFormattedExpression : CompiledTemplate
     {

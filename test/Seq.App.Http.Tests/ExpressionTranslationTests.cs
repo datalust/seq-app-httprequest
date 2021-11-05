@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using Serilog.Expressions.Compilation;
-using Serilog.Expressions.Parsing;
-using Serilog.Expressions.Tests.Support;
+using Seq.App.Http.Expressions.Compilation;
+using Seq.App.Http.Expressions.Parsing;
+using Seq.App.Http.Tests.Support;
 using Xunit;
 
-namespace Serilog.Expressions.Tests
+namespace Seq.App.Http.Tests
 {
     public class ExpressionTranslationTests
     {

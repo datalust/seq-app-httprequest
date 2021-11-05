@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Serilog.Expressions.Ast;
-using Serilog.Expressions.Compilation.Transformations;
+using Seq.App.Http.Expressions.Ast;
+using Seq.App.Http.Expressions.Compilation.Transformations;
 
-namespace Serilog.Expressions.Compilation.Properties
+namespace Seq.App.Http.Expressions.Compilation.Properties
 {
     class PropertiesObjectAccessorTransformer : IdentityTransformer
     {

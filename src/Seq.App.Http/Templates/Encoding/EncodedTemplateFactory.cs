@@ -1,9 +1,9 @@
 ﻿using System;
-using Serilog.Expressions;
+using Seq.App.Http.Expressions;
+using Seq.App.Http.Templates.Compilation;
 using Serilog.Parsing;
-using Serilog.Templates.Compilation;
 
-namespace Serilog.Templates.Encoding
+namespace Seq.App.Http.Templates.Encoding
 {
     class EncodedTemplateFactory
     {

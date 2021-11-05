@@ -1,9 +1,9 @@
-﻿using Serilog.Templates;
-using Serilog.Templates.Ast;
-using Serilog.Templates.Parsing;
+﻿using Seq.App.Http.Templates;
+using Seq.App.Http.Templates.Ast;
+using Seq.App.Http.Templates.Parsing;
 using Xunit;
 
-namespace Serilog.Expressions.Tests
+namespace Seq.App.Http.Tests
 {
     public class TemplateParserTests
     {

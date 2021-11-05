@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Serilog.Expressions.Tests.Support
+namespace Seq.App.Http.Tests.Support
 {
     // "Arrow-separated values ;-) ... convenient because the Unicode `⇶` character doesn't appear in
     // any of the cases themselves, and so we ignore any need for special character escaping (which is

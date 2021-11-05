@@ -12,18 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Serilog.Expressions.Ast;
-using Serilog.Expressions.Parsing;
+using Seq.App.Http.Expressions.Ast;
+using Seq.App.Http.Expressions.Parsing;
+using Seq.App.Http.Templates.Ast;
 using Serilog.Parsing;
 using Superpower;
 using Superpower.Model;
 using Superpower.Parsers;
-using Serilog.Templates.Ast;
-using static Serilog.Expressions.Parsing.ExpressionToken;
+using static Seq.App.Http.Expressions.Parsing.ExpressionToken;
 
 // ReSharper disable SuggestBaseTypeForParameter, ConvertIfStatementToSwitchStatement, AccessToModifiedClosure
 
-namespace Serilog.Templates.Parsing
+namespace Seq.App.Http.Templates.Parsing
 {
     class TemplateTokenParsers
     {

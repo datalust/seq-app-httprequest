@@ -15,12 +15,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Seq.App.Http.Expressions.Compilation.Linq;
 using Serilog.Events;
-using Serilog.Expressions.Compilation.Linq;
 
 // ReSharper disable ForCanBeConvertedToForeach, InvertIf, MemberCanBePrivate.Global, UnusedMember.Global, InconsistentNaming, ReturnTypeCanBeNotNullable
 
-namespace Serilog.Expressions.Runtime
+namespace Seq.App.Http.Expressions.Runtime
 {
     static class RuntimeOperators
     {

@@ -1,8 +1,8 @@
-﻿using Serilog.Expressions.Runtime;
-using Serilog.Expressions.Tests.Support;
+﻿using Seq.App.Http.Expressions.Runtime;
+using Seq.App.Http.Tests.Support;
 using Xunit;
 
-namespace Serilog.Expressions.Tests.Expressions.Runtime
+namespace Seq.App.Http.Tests.Expressions.Runtime
 {
     public class LocalsTests
     {

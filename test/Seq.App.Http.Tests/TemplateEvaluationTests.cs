@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using Serilog.Expressions.Tests.Support;
-using Serilog.Templates;
+using Seq.App.Http.Templates;
+using Seq.App.Http.Tests.Support;
 using Xunit;
 
-namespace Serilog.Expressions.Tests
+namespace Seq.App.Http.Tests
 {
     public class TemplateEvaluationTests
     {

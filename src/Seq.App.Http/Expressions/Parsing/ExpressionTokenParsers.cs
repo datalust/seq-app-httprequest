@@ -15,13 +15,13 @@
 using System;
 using System.Globalization;
 using System.Linq;
+using Seq.App.Http.Expressions.Ast;
 using Serilog.Events;
-using Serilog.Expressions.Ast;
 using Superpower;
 using Superpower.Model;
 using Superpower.Parsers;
 
-namespace Serilog.Expressions.Parsing
+namespace Seq.App.Http.Expressions.Parsing
 {
     static class ExpressionTokenParsers
     {

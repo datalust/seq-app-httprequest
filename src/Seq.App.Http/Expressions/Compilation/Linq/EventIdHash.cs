@@ -16,7 +16,7 @@ using System;
 
 // ReSharper disable ForCanBeConvertedToForeach
 
-namespace Serilog.Expressions.Compilation.Linq
+namespace Seq.App.Http.Expressions.Compilation.Linq
 {
     /// <summary>
     /// Hash functions for message templates. See <see cref="Compute"/>.
@@ -30,7 +30,6 @@ namespace Serilog.Expressions.Compilation.Linq
         /// </summary>
         /// <param name="messageTemplate">A message template.</param>
         /// <returns>A 32-bit hash of the template.</returns>
-        [CLSCompliant(false)]
         public static uint Compute(string messageTemplate)
         {
             if (messageTemplate == null) throw new ArgumentNullException(nameof(messageTemplate));
