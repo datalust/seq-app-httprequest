@@ -13,7 +13,7 @@ using Serilog.Formatting.Json;
 using Serilog.Parsing;
 using Xunit;
 
-namespace Seq.App.Http.Tests
+namespace Seq.App.Http.Tests.Expressions
 {
     /// <summary>
     /// These tests track the ability of Seq.App.Http to faithfully reproduce the JSON formats implemented in

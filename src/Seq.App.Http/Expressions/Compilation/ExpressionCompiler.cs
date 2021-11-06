@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Globalization;
 using Seq.App.Http.Expressions.Ast;
 using Seq.App.Http.Expressions.Compilation.Arrays;
 using Seq.App.Http.Expressions.Compilation.Linq;
@@ -37,7 +38,7 @@ namespace Seq.App.Http.Expressions.Compilation
             return actual;
         }
 
-        public static Evaluatable Compile(Expression expression, IFormatProvider? formatProvider,
+        public static Evaluatable Compile(Expression expression, CultureInfo? formatProvider,
             NameResolver nameResolver)
         {
             var actual = Translate(expression);

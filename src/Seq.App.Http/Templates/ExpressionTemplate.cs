@@ -14,6 +14,7 @@
 
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using System.IO;
 using Seq.App.Http.Expressions;
 using Seq.App.Http.Templates.Compilation;
@@ -54,7 +55,7 @@ namespace Seq.App.Http.Templates
         /// Construct an <see cref="ExpressionTemplate"/>.
         /// </summary>
         /// <param name="template">The template text.</param>
-        /// <param name="formatProvider">Optionally, an <see cref="IFormatProvider"/> to use when formatting
+        /// <param name="culture">Optionally, a <see cref="CultureInfo"/> to use when formatting
         /// embedded values.</param>
         /// <param name="result">The parsed template, if successful.</param>
         /// <param name="error">A description of the error, if unsuccessful.</param>
@@ -64,7 +65,7 @@ namespace Seq.App.Http.Templates
         /// <returns><c langword="true">true</c> if the template was well-formed.</returns>
         public static bool TryParse(
             string template,
-            IFormatProvider? formatProvider,
+            CultureInfo? culture,
             NameResolver? nameResolver,
             TemplateOutputEncoder? encoder,
             [MaybeNullWhen(false)] out ExpressionTemplate result,
@@ -84,7 +85,7 @@ namespace Seq.App.Http.Templates
             result = new ExpressionTemplate(
                 TemplateCompiler.Compile(
                     planned,
-                    formatProvider,
+                    culture,
                     TemplateFunctionNameResolver.Build(nameResolver, planned),
                     new EncodedTemplateFactory(encoder)));
 
@@ -100,14 +101,14 @@ namespace Seq.App.Http.Templates
         /// Construct an <see cref="ExpressionTemplate"/>.
         /// </summary>
         /// <param name="template">The template text.</param>
-        /// <param name="formatProvider">Optionally, an <see cref="IFormatProvider"/> to use when formatting
+        /// <param name="culture">Optionally, a <see cref="CultureInfo"/> to use when formatting
         /// embedded values.</param>
         /// <param name="nameResolver">Optionally, a <see cref="NameResolver"/>
         /// with which to resolve function names that appear in the template.</param>
         /// <param name="encoder">Optionally, an encoder to apply to output substituted into template holes.</param>
         public ExpressionTemplate(
             string template,
-            IFormatProvider? formatProvider = null,
+            CultureInfo? culture = null,
             NameResolver? nameResolver = null,
             TemplateOutputEncoder? encoder = null)
         {
@@ -121,7 +122,7 @@ namespace Seq.App.Http.Templates
 
             _compiled = TemplateCompiler.Compile(
                 planned,
-                formatProvider,
+                culture,
                 TemplateFunctionNameResolver.Build(nameResolver, planned),
                 new EncodedTemplateFactory(encoder));
         }

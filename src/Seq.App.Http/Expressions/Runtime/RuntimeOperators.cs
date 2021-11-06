@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using Seq.App.Http.Expressions.Compilation.Linq;
 using Serilog.Events;
@@ -533,6 +534,22 @@ namespace Seq.App.Http.Expressions.Runtime
         {
             // DateTimeOffset.Now is the generator for LogEvent.Timestamp.
             return new ScalarValue(DateTimeOffset.Now);
+        }
+        
+        public static LogEventPropertyValue? ToLower(CultureInfo? culture, LogEventPropertyValue? value)
+        {
+            if (Coerce.String(value, out var s))
+                return new ScalarValue(s.ToLower(culture));
+
+            return null;
+        }
+        
+        public static LogEventPropertyValue? ToUpper(CultureInfo? culture, LogEventPropertyValue? value)
+        {
+            if (Coerce.String(value, out var s))
+                return new ScalarValue(s.ToUpper(culture));
+
+            return null;
         }
     }
 }

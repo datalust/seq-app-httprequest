@@ -1,6 +1,6 @@
 ﻿// ReSharper disable InconsistentNaming
 
-namespace Seq.App.Http
+namespace Seq.App.Http.Settings
 {
     public enum HttpMethodSetting
     {

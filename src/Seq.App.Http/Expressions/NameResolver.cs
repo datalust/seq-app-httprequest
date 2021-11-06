@@ -14,6 +14,7 @@
 
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using System.Reflection;
 using Serilog.Events;
 
@@ -33,7 +34,7 @@ namespace Seq.App.Http.Expressions
         /// <remarks>The method implementing a function should be <c>static</c>, return <see cref="LogEventPropertyValue"/>,
         /// and accept parameters of type <see cref="LogEventPropertyValue"/>. If the <c>ci</c> modifier is supported,
         /// a <see cref="StringComparison"/> should be included in the argument list. If the function is culture-specific,
-        /// an <see cref="IFormatProvider"/> should be included in the argument list.</remarks>
+        /// an <see cref="IFormatProvider"/> or <see cref="CultureInfo" /> should be included in the argument list.</remarks>
         public virtual bool TryResolveFunctionName(string name, [MaybeNullWhen(false)] out MethodInfo implementation)
         {
             implementation = null;

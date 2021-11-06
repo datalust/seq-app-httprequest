@@ -286,3 +286,7 @@ undefined() = undefined() ci         ⇶ undefined()
 'test' like '%'                      ⇶ true
 'test' like ''                       ⇶ false
 '' like ''                           ⇶ true
+
+// Case manipulation
+tolower('Test')                      ⇶ 'test'
+toupper('Test')                      ⇶ 'TEST'

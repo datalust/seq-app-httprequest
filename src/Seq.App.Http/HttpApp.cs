@@ -1,4 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Seq.App.Http.Settings;
 using Seq.Apps;
 using Serilog.Events;
 
@@ -48,18 +51,18 @@ namespace Seq.App.Http
             HelpText = "Additional headers to send with the request, one per line in `Name: Value` format.")]
         public string? OtherHeaders { get; set; }
         
-        [SeqAppSetting(InputType = SettingInputType.Checkbox, DisplayName = "Extended Error Diagnostics",
+        [SeqAppSetting(InputType = SettingInputType.Checkbox, IsOptional = true, DisplayName = "Extended Error Diagnostics",
             HelpText = "Whether or not to include outbound request bodies, URLs, etc., and response bodies when requests fail.")]
         public bool ExtendedErrorDiagnostics { get; set; }
         
         protected override void OnAttached()
         {
             _httpRequestMessageFactory = new HttpRequestMessageFactory(
-                Url,
-                Method,
+                Url ?? throw new InvalidOperationException("The `Url` setting is required."),
+                new HttpMethod(Method.ToString()),
                 Body,
                 MediaType,
-                AuthenticationHeader, OtherHeaders);
+                HeaderSettingFormat.FromSettings(AuthenticationHeader, OtherHeaders));
         }
 
         public async Task OnAsync(Event<LogEvent> evt)

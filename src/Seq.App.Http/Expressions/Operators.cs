@@ -44,6 +44,8 @@ namespace Seq.App.Http.Expressions
         public const string OpStartsWith = "StartsWith";
         public const string OpSubstring = "Substring";
         public const string OpTagOf = "TagOf";
+        public const string OpToLower = "ToLower";
+        public const string OpToUpper = "ToUpper";
         public const string OpToString = "ToString";
         public const string OpTypeOf = "TypeOf";
         public const string OpUndefined = "Undefined";

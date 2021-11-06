@@ -15,6 +15,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -184,7 +185,7 @@ namespace Seq.App.Http.Expressions.Compilation.Linq
             return sw.ToString();
         }
 
-        public static LogEventPropertyValue? GetRenderings(LogEvent logEvent, IFormatProvider? formatProvider)
+        public static LogEventPropertyValue? GetRenderings(LogEvent logEvent, CultureInfo? formatProvider)
         {
             List<LogEventPropertyValue>? elements = null;
             foreach (var token in logEvent.MessageTemplate.Tokens)

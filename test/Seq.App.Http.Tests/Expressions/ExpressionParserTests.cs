@@ -2,7 +2,7 @@
 using Seq.App.Http.Expressions.Parsing;
 using Xunit;
 
-namespace Seq.App.Http.Tests
+namespace Seq.App.Http.Tests.Expressions
 {
     public class ExpressionParserTests
     {

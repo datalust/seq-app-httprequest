@@ -4,7 +4,7 @@ using Seq.App.Http.Expressions.Parsing;
 using Seq.App.Http.Tests.Support;
 using Xunit;
 
-namespace Seq.App.Http.Tests
+namespace Seq.App.Http.Tests.Expressions
 {
     public class ExpressionTranslationTests
     {

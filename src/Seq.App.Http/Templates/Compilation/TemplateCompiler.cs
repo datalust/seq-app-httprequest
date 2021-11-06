@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Globalization;
 using System.Linq;
 using Seq.App.Http.Expressions;
 using Seq.App.Http.Expressions.Ast;
@@ -25,7 +26,7 @@ namespace Seq.App.Http.Templates.Compilation
     static class TemplateCompiler
     {
         public static CompiledTemplate Compile(Template template,
-            IFormatProvider? formatProvider, NameResolver nameResolver,
+            CultureInfo? culture, NameResolver nameResolver,
             EncodedTemplateFactory encoder)
         {
             return template switch
@@ -43,21 +44,21 @@ namespace Seq.App.Http.Templates.Compilation
                 {
                     Expression: AmbientNameExpression { IsBuiltIn: true, PropertyName: BuiltInProperty.Message },
                     Format: null
-                } message => encoder.Wrap(new CompiledMessageToken(formatProvider, message.Alignment)),
+                } message => encoder.Wrap(new CompiledMessageToken(culture, message.Alignment)),
                 FormattedExpression expression => encoder.MakeCompiledFormattedExpression(
-                    ExpressionCompiler.Compile(expression.Expression, formatProvider, nameResolver), expression.Format, expression.Alignment, formatProvider),
-                TemplateBlock block => new CompiledTemplateBlock(block.Elements.Select(e => Compile(e, formatProvider, nameResolver, encoder)).ToArray()),
+                    ExpressionCompiler.Compile(expression.Expression, culture, nameResolver), expression.Format, expression.Alignment, culture),
+                TemplateBlock block => new CompiledTemplateBlock(block.Elements.Select(e => Compile(e, culture, nameResolver, encoder)).ToArray()),
                 Conditional conditional => new CompiledConditional(
-                    ExpressionCompiler.Compile(conditional.Condition, formatProvider, nameResolver),
-                    Compile(conditional.Consequent, formatProvider, nameResolver, encoder),
-                    conditional.Alternative == null ? null : Compile(conditional.Alternative, formatProvider, nameResolver, encoder)),
+                    ExpressionCompiler.Compile(conditional.Condition, culture, nameResolver),
+                    Compile(conditional.Consequent, culture, nameResolver, encoder),
+                    conditional.Alternative == null ? null : Compile(conditional.Alternative, culture, nameResolver, encoder)),
                 Repetition repetition => new CompiledRepetition(
-                    ExpressionCompiler.Compile(repetition.Enumerable, formatProvider, nameResolver),
+                    ExpressionCompiler.Compile(repetition.Enumerable, culture, nameResolver),
                     repetition.BindingNames.Length > 0 ? repetition.BindingNames[0] : null,
                     repetition.BindingNames.Length > 1 ? repetition.BindingNames[1] : null,
-                    Compile(repetition.Body, formatProvider, nameResolver, encoder),
-                    repetition.Delimiter == null ? null : Compile(repetition.Delimiter, formatProvider, nameResolver, encoder),
-                    repetition.Alternative == null ? null : Compile(repetition.Alternative, formatProvider, nameResolver, encoder)),
+                    Compile(repetition.Body, culture, nameResolver, encoder),
+                    repetition.Delimiter == null ? null : Compile(repetition.Delimiter, culture, nameResolver, encoder),
+                    repetition.Alternative == null ? null : Compile(repetition.Alternative, culture, nameResolver, encoder)),
                 _ => throw new NotSupportedException()
             };
         }

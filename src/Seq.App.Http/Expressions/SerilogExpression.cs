@@ -38,7 +38,7 @@ namespace Seq.App.Http.Expressions
         ///     with which to resolve function names that appear in the template.</param>
         /// <returns>A function that evaluates the expression in the context of a log event.</returns>
         public static CompiledExpression Compile(string expression,
-            IFormatProvider? formatProvider = null,
+            CultureInfo? formatProvider = null,
             NameResolver? nameResolver = null)
         {
             if (expression == null) throw new ArgumentNullException(nameof(expression));
@@ -80,7 +80,7 @@ namespace Seq.App.Http.Expressions
         /// <remarks>Regular expression syntax errors currently generate exceptions instead of producing friendly
         /// errors.</remarks>
         public static bool TryCompile(string expression,
-            IFormatProvider? formatProvider,
+            CultureInfo? formatProvider,
             NameResolver nameResolver,
             [MaybeNullWhen(false)] out CompiledExpression result,
             [MaybeNullWhen(true)] out string error)
@@ -91,7 +91,7 @@ namespace Seq.App.Http.Expressions
         }
 
         static bool TryCompileImpl(string expression,
-            IFormatProvider? formatProvider,
+            CultureInfo? formatProvider,
             NameResolver? nameResolver,
             [MaybeNullWhen(false)] out CompiledExpression result,
             [MaybeNullWhen(true)] out string error)

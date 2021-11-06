@@ -6,7 +6,7 @@ using Xunit;
 
 // ReSharper disable CoVariantArrayConversion
 
-namespace Seq.App.Http.Tests
+namespace Seq.App.Http.Tests.Expressions
 {
     public class ExpressionCompilerTests
     {

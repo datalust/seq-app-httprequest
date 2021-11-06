@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -35,7 +36,7 @@ namespace Seq.App.Http.Expressions.Compilation.Linq
     class LinqExpressionCompiler : SerilogExpressionTransformer<ExpressionBody>
     {
         readonly NameResolver _nameResolver;
-        readonly IFormatProvider? _formatProvider;
+        readonly CultureInfo? _formatProvider;
 
         static readonly MethodInfo CollectSequenceElementsMethod = typeof(Intrinsics)
             .GetMethod(nameof(Intrinsics.CollectSequenceElements), BindingFlags.Static | BindingFlags.Public)!;
@@ -78,13 +79,13 @@ namespace Seq.App.Http.Expressions.Compilation.Linq
 
         ParameterExpression Context { get; } = LX.Variable(typeof(EvaluationContext), "ctx");
 
-        LinqExpressionCompiler(IFormatProvider? formatProvider, NameResolver nameResolver)
+        LinqExpressionCompiler(CultureInfo? formatProvider, NameResolver nameResolver)
         {
             _nameResolver = nameResolver;
             _formatProvider = formatProvider;
         }
 
-        public static Evaluatable Compile(Expression expression, IFormatProvider? formatProvider,
+        public static Evaluatable Compile(Expression expression, CultureInfo? formatProvider,
             NameResolver nameResolver)
         {
             if (expression == null) throw new ArgumentNullException(nameof(expression));
@@ -136,6 +137,8 @@ namespace Seq.App.Http.Expressions.Compilation.Linq
                 }
                 else if (pi.ParameterType == typeof(StringComparison))
                     boundParameters.Add(LX.Constant(call.IgnoreCase ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal));
+                else if (pi.ParameterType == typeof(CultureInfo))
+                    boundParameters.Add(LX.Constant(_formatProvider, typeof(CultureInfo)));
                 else if (pi.ParameterType == typeof(IFormatProvider))
                     boundParameters.Add(LX.Constant(_formatProvider, typeof(IFormatProvider)));
                 else if (pi.ParameterType == typeof(LogEvent))
