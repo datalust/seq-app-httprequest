@@ -27,9 +27,10 @@ namespace Seq.App.HttpRequest
             _client = client;
         }
         
-        [SeqAppSetting(HelpText = "The target URL. May include template substitutions based on event properties, for " +
-                                  "example, `https://api.example.com/notify?to={Email}`. Placeholders in templates will" +
-                                  " be URI-encoded.")]
+        [SeqAppSetting(DisplayName = "URL",
+            HelpText = "The target URL. May include template substitutions based on event properties, for " +
+                       "example, `https://api.example.com/notify?to={Email}`. Placeholders in templates will" +
+                       " be URI-encoded.")]
         public string? Url { get; set; }
 
         [SeqAppSetting(IsOptional = true, HelpText = "The HTTP method to use. The default is `POST`.")]
