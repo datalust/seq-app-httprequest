@@ -1,4 +1,4 @@
-# Seq.App.Http
+# Seq.App.HttpRequest
 
 Send events and notifications from Seq to a remote HTTP/REST/WebHook endpoint.
 
@@ -6,7 +6,7 @@ Send events and notifications from Seq to a remote HTTP/REST/WebHook endpoint.
 
 ## Getting started
 
-Install the app under _Settings > Apps_. The app package id is `Seq.App.Http`.
+Install the app under _Settings > Apps_. The app package id is `Seq.App.HttpRequest`.
 
 Visit the Seq documentation for [detailed information about installing and configuring Seq Apps](https://docs.datalust.co/docs/installing-seq-apps).
 
@@ -27,3 +27,4 @@ Instances of the app support the following properties.
 ## Acknowledgements
 
 Includes substantial portions of [_Serilog.Expressions_](https://github.com/serilog/serilog-expressions), modified to support output encoding.
+~~~~
