@@ -1,4 +1,4 @@
-# Seq.App.HttpRequest [![Build status](https://ci.appveyor.com/api/projects/status/63ki29bjjgk8htn3/branch/dev?svg=true)](https://ci.appveyor.com/project/datalust/seq-app-httprequest/branch/dev)
+# Seq.App.HttpRequest [![Build status](https://ci.appveyor.com/api/projects/status/63ki29bjjgk8htn3/branch/dev?svg=true)](https://ci.appveyor.com/project/datalust/seq-app-httprequest/branch/dev) [![NuGet Package](https://img.shields.io/nuget/vpre/seq.app.httprequest)](https://nuget.org/packages/seq.app.httprequest)
 
 Send events and notifications from Seq to a remote HTTP/REST/WebHook endpoint.
 
