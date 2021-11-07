@@ -26,7 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\asset\seq-app-http.png" Pack="true" Visible="false" PackagePath="" />
+    <None Include="../../asset/seq-app-http.png" Pack="true" Visible="false" PackagePath="" />
+    <None Include="../../LICENSE" Pack="true" PackagePath="" />
+    <None Include="./obj/publish/**/*" Exclude="./obj/publish/$(MSBuildProjectName).dll;./obj/publish/Seq.Apps.dll;./obj/publish/Serilog.dll" Pack="true" PackagePath="lib/$(TargetFramework)" />
   </ItemGroup>
-
 </Project>
