@@ -9,10 +9,10 @@ namespace Seq.App.Http.Tests.Support
     {
         public List<HttpRequestMessage> Received { get; } = new();
         
-        public override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage message)
+        public override Task<HttpResponseMessage> SendAsync(HttpRequestMessage message)
         {
             Received.Add(message);
-            return new HttpResponseMessage(HttpStatusCode.OK);
+            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK));
         }
     }
 }

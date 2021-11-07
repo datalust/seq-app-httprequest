@@ -7,7 +7,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <PackageTags>seq-app</PackageTags>
     <PackageProjectUrl>https://github.com/datalust/seq-app-http</PackageProjectUrl>
-    <PackageIcon>icon.png</PackageIcon>
+    <PackageIcon>seq-app-http.png</PackageIcon>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/datalust/seq-app-http</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\assets\icon.png" Pack="true" Visible="false" PackagePath="" />
+    <None Include="..\..\asset\seq-app-http.png" Pack="true" Visible="false" PackagePath="" />
   </ItemGroup>
 
 </Project>
