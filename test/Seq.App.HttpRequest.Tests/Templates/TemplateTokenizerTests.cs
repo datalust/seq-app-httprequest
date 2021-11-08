@@ -5,7 +5,7 @@ using Seq.App.HttpRequest.Templates.Parsing;
 using Xunit;
 using static Seq.App.HttpRequest.Expressions.Parsing.ExpressionToken;
 
-namespace Seq.App.HttpRequest.Tests.Expressions
+namespace Seq.App.HttpRequest.Tests.Templates
 {
     public class TemplateTokenizerTests
     {

@@ -24,11 +24,11 @@ namespace Seq.App.HttpRequest.Templates.Encoding
             _inner = new CompiledFormattedExpression(GetSubstituteLocalValue, format, alignment, formatProvider);
         }
 
-        LogEventPropertyValue GetSubstituteLocalValue(EvaluationContext context)
+        LogEventPropertyValue? GetSubstituteLocalValue(EvaluationContext context)
         {
             return Locals.TryGetValue(context.Locals, _substituteLocalName, out var computed)
                 ? computed
-                : throw new InvalidOperationException("Substituted value should always be set at this point.");
+                : null;
         }
 
         public override void Evaluate(EvaluationContext ctx, TextWriter output)

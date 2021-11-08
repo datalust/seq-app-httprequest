@@ -3,7 +3,7 @@ using Seq.App.HttpRequest.Templates.Ast;
 using Seq.App.HttpRequest.Templates.Parsing;
 using Xunit;
 
-namespace Seq.App.HttpRequest.Tests.Expressions
+namespace Seq.App.HttpRequest.Tests.Templates
 {
     public class TemplateParserTests
     {

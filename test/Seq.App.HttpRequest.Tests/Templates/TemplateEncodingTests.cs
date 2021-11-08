@@ -4,7 +4,7 @@ using Seq.App.HttpRequest.Templates;
 using Seq.App.HttpRequest.Tests.Support;
 using Xunit;
 
-namespace Seq.App.HttpRequest.Tests.Expressions
+namespace Seq.App.HttpRequest.Tests.Templates
 {
     public class TemplateEncodingTests
     {
