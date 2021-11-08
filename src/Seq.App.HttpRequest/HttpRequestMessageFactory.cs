@@ -25,7 +25,7 @@ namespace Seq.App.HttpRequest
             _mediaType = mediaType;
             _headers = headers;
             _url = new ExpressionTemplate(urlTemplate, encoder: new TemplateOutputUriEncoder());
-            _body = bodyTemplate != null ? new ExpressionTemplate(bodyTemplate) : null;
+            _body = bodyTemplate != null || mediaType != null ? new ExpressionTemplate(bodyTemplate ?? "") : null;
             _method = method;
         }
 

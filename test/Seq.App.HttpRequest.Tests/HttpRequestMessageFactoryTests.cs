@@ -32,6 +32,14 @@ namespace Seq.App.HttpRequest.Tests
             
             Assert.Equal("The name is world", new StreamReader(content.ReadAsStream()).ReadToEnd());
         }
+        
+        
+        [Fact]
+        public void WhenMediaTypeIsSpecifiedThenBodyIsSentEvenIfBodyIsNull()
+        {
+            var message = CreateMessageFromEvent(body: null, mediaType: "text/plain", method: HttpMethod.Post);
+            Assert.IsType<StringContent>(message.Content);
+        }
 
         [Fact]
         public void RequestUrlIsTemplated()
