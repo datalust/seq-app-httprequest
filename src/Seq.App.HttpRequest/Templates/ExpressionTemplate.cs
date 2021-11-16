@@ -133,5 +133,16 @@ namespace Seq.App.HttpRequest.Templates
         {
             _compiled.Evaluate(new EvaluationContext(logEvent), output);
         }
+
+        /// <summary>
+        /// Escape <paramref name="text"/> so that it will be interpreted as
+        /// literal text when incorporated into an expression template.
+        /// </summary>
+        /// <param name="text">The text to apply escaping to.</param>
+        /// <returns>The text with any template special characters escaped.</returns>
+        public static string EscapeLiteralText(string text)
+        {
+            return text.Replace("{", "{{").Replace("}", "}}");
+        }
     }
 }
