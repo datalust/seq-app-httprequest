@@ -20,7 +20,7 @@ namespace Seq.App.HttpRequest
         readonly List<(string, string)> _headers;
         readonly System.Text.Encoding _utf8 = new UTF8Encoding(false);
 
-        public HttpRequestMessageFactory(string urlTemplate, HttpMethod method, string? bodyTemplate, bool bodyIsTemplate, string? mediaType, List<(string, string)> headers)
+        public HttpRequestMessageFactory(string urlTemplate, HttpMethod method, string? body, bool bodyIsTemplate, string? mediaType, List<(string, string)> headers)
         {
             if (urlTemplate == null) throw new ArgumentNullException(nameof(urlTemplate));
             
@@ -29,13 +29,13 @@ namespace Seq.App.HttpRequest
             
             _url = new ExpressionTemplate(urlTemplate, encoder: new TemplateOutputUriEncoder());
 
-            if (bodyTemplate != null || mediaType != null)
+            if (body != null || mediaType != null)
             {
-                var bodyTemplateContent = bodyTemplate ?? "";
+                var bodyTemplate = body ?? "";
                 if (!bodyIsTemplate)
-                    bodyTemplateContent = ExpressionTemplate.EscapeLiteralText(bodyTemplateContent);
+                    bodyTemplate = ExpressionTemplate.EscapeLiteralText(bodyTemplate);
 
-                _body = new ExpressionTemplate(bodyTemplateContent);
+                _body = new ExpressionTemplate(bodyTemplate);
             }
             else
             {
