@@ -64,7 +64,7 @@ To **run the app locally**, without installing the package into Seq, use `Run.ps
 This will stream events from a Seq instance at `http://localhost:5341`, and send HTTP requests to `http://localhost:5050`. Modify the script to
 specify different app settings.
 
-To easily **inspect your generated HTTP requests**, check out [Webhook.site](webhook.site).
+To easily **inspect your generated HTTP requests**, check out [Webhook.site](https://webhook.site).
 
 ## Acknowledgements
 
