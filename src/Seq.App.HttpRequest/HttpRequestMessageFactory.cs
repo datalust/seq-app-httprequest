@@ -29,7 +29,11 @@ namespace Seq.App.HttpRequest
             
             _url = new ExpressionTemplate(urlTemplate, encoder: new TemplateOutputUriEncoder());
 
-            if (body != null || mediaType != null)
+            if (body == null && mediaType == null)
+            {
+                _body = null;
+            }
+            else
             {
                 var bodyTemplate = body ?? "";
                 if (!bodyIsTemplate)
@@ -37,11 +41,7 @@ namespace Seq.App.HttpRequest
 
                 _body = new ExpressionTemplate(bodyTemplate);
             }
-            else
-            {
-                _body = null;
-            }
-            
+
             _method = method;
         }
 
