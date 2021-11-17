@@ -32,13 +32,23 @@ namespace Seq.App.HttpRequest.Tests
             
             Assert.Equal("The name is world", new StreamReader(content.ReadAsStream()).ReadToEnd());
         }
-        
-        
+
         [Fact]
         public void WhenMediaTypeIsSpecifiedThenBodyIsSentEvenIfBodyIsNull()
         {
             var message = CreateMessageFromEvent(body: null, mediaType: "text/plain", method: HttpMethod.Post);
             Assert.IsType<StringContent>(message.Content);
+        }
+        
+        [Fact]
+        public void BodyIsPreservedExactlyWhenBodyIsNotTemplate()
+        {
+            const string literalBody = "{\"a\":{}}";
+            var message = CreateMessageFromEvent(body: literalBody, bodyIsTemplate: false);
+            
+            var content = Assert.IsType<StringContent>(message.Content);
+            
+            Assert.Equal(literalBody, new StreamReader(content.ReadAsStream()).ReadToEnd());
         }
 
         [Fact]
@@ -75,12 +85,13 @@ namespace Seq.App.HttpRequest.Tests
         }
 
         HttpRequestMessage CreateMessageFromEvent(string? url = null, HttpMethod? method = null,
-            string? body = null, string? mediaType = null, List<(string, string)>? headers = null)
+            string? body = null, bool bodyIsTemplate = true, string? mediaType = null, List<(string, string)>? headers = null)
         {
             var factory = new HttpRequestMessageFactory(
                 url ?? "https://example.com",
                 method ?? HttpMethod.Get,
                 body,
+                bodyIsTemplate,
                 mediaType,
                 headers ?? new List<(string, string)>());
 

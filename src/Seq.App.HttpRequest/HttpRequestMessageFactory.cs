@@ -4,6 +4,7 @@ using System.IO;
 using System.Net.Http;
 using System.Text;
 using Seq.App.HttpRequest.Encoding;
+using Seq.App.HttpRequest.Expressions;
 using Seq.App.HttpRequest.Templates;
 using Serilog.Events;
 using Serilog.Formatting;
@@ -19,13 +20,28 @@ namespace Seq.App.HttpRequest
         readonly List<(string, string)> _headers;
         readonly System.Text.Encoding _utf8 = new UTF8Encoding(false);
 
-        public HttpRequestMessageFactory(string urlTemplate, HttpMethod method, string? bodyTemplate, string? mediaType, List<(string, string)> headers)
+        public HttpRequestMessageFactory(string urlTemplate, HttpMethod method, string? body, bool bodyIsTemplate, string? mediaType, List<(string, string)> headers)
         {
             if (urlTemplate == null) throw new ArgumentNullException(nameof(urlTemplate));
+            
             _mediaType = mediaType;
             _headers = headers;
+            
             _url = new ExpressionTemplate(urlTemplate, encoder: new TemplateOutputUriEncoder());
-            _body = bodyTemplate != null || mediaType != null ? new ExpressionTemplate(bodyTemplate ?? "") : null;
+
+            if (body == null && mediaType == null)
+            {
+                _body = null;
+            }
+            else
+            {
+                var bodyTemplate = body ?? "";
+                if (!bodyIsTemplate)
+                    bodyTemplate = ExpressionTemplate.EscapeLiteralText(bodyTemplate);
+
+                _body = new ExpressionTemplate(bodyTemplate);
+            }
+
             _method = method;
         }
 

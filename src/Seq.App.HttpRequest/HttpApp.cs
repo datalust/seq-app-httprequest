@@ -37,8 +37,12 @@ namespace Seq.App.HttpRequest
         public HttpMethodSetting Method { get; set; } = HttpMethodSetting.POST;
 
         [SeqAppSetting(InputType = SettingInputType.LongText, IsOptional = true,
-            HelpText = "The request body to send. Template based on event properties, supporting plain text and JSON.")]
+            HelpText = "The request body to send.")]
         public string? Body { get; set; }
+        
+        [SeqAppSetting(InputType = SettingInputType.Checkbox, IsOptional = true, DisplayName = "Body is a template",
+            HelpText = "Treat the request body (above) as a template over event properties.")]
+        public bool BodyIsTemplate { get; set; }
 
         [SeqAppSetting(IsOptional = true, DisplayName = "Media Type",
             HelpText = "Media type describing the body.")]
@@ -62,6 +66,7 @@ namespace Seq.App.HttpRequest
                 Url ?? throw new InvalidOperationException("The `Url` setting is required."),
                 new HttpMethod(Method.ToString()),
                 Body,
+                BodyIsTemplate,
                 MediaType,
                 HeaderSettingFormat.FromSettings(AuthenticationHeader, OtherHeaders));
         }

@@ -16,7 +16,8 @@ Instances of the app support the following properties.
 | --- | --- | --- |
 | **URL** | The target URL. This is a template based on event properties, for example, `https://api.example.com/notify?to={Email}`. Placeholders in templates will be URI-encoded. | |
 | **Method** | The HTTP method to use. | `POST` |
-| **Body** | The request body to send. This is a template based on event properties, for example `New request from: {Email}`. | |
+| **Body** | The request body to send. | |
+| **Body is a template** | Whether to treat the body as a template based on event properties, for example `New request from: {Email}`, or to send the body as-is. | `false` |
 | **Media Type** | Media type describing the body. | |
 | **Authentication Header** | An optional `Name: Value` header, stored as sensitive data, for authentication purposes. | |
 | **Other Headers** | Additional headers to send with the request, one per line in `Name: Value` format. | |
@@ -63,7 +64,7 @@ To **run the app locally**, without installing the package into Seq, use `Run.ps
 This will stream events from a Seq instance at `http://localhost:5341`, and send HTTP requests to `http://localhost:5050`. Modify the script to
 specify different app settings.
 
-To easily **inspect your generated HTTP requests**, check out [Webhook.site](webhook.site).
+To easily **inspect your generated HTTP requests**, check out [Webhook.site](https://webhook.site).
 
 ## Acknowledgements
 
