@@ -289,3 +289,9 @@ undefined() = undefined() ci         ⇶ undefined()
 // Case manipulation
 tolower('Test')                      ⇶ 'test'
 toupper('Test')                      ⇶ 'TEST'
+
+// URI encoding
+uriencode(null)                      ⇶ undefined()
+uriencode(undefined())               ⇶ undefined()
+uriencode('')                        ⇶ ''
+uriencode(' ')                       ⇶ '%20'
