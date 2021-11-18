@@ -49,6 +49,7 @@ namespace Seq.App.HttpRequest.Expressions
         public const string OpToString = "ToString";
         public const string OpTypeOf = "TypeOf";
         public const string OpUndefined = "Undefined";
+        public const string OpUriEncode = "UriEncode";
         public const string OpUtcDateTime = "UtcDateTime";
 
         public const string IntermediateOpLike = "_Internal_Like";
