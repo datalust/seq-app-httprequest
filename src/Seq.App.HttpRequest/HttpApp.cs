@@ -28,15 +28,20 @@ namespace Seq.App.HttpRequest
         }
         
         [SeqAppSetting(DisplayName = "URL",
+            Syntax = "template",
             HelpText = "The target URL. May include template substitutions based on event properties, for " +
                        "example, `https://api.example.com/notify?to={Email}`. Placeholders in templates will" +
                        " be URI-encoded.")]
         public string? Url { get; set; }
 
-        [SeqAppSetting(IsOptional = true, HelpText = "The HTTP method to use. The default is `POST`.")]
+        [SeqAppSetting(
+            IsOptional = true, 
+            Syntax = "code",
+            HelpText = "The HTTP method to use. The default is `POST`.")]
         public HttpMethodSetting Method { get; set; } = HttpMethodSetting.POST;
 
         [SeqAppSetting(InputType = SettingInputType.LongText, IsOptional = true,
+            Syntax = "template",
             HelpText = "The request body to send.")]
         public string? Body { get; set; }
         
@@ -45,14 +50,17 @@ namespace Seq.App.HttpRequest
         public bool BodyIsTemplate { get; set; }
 
         [SeqAppSetting(IsOptional = true, DisplayName = "Media Type",
+            Syntax = "code",
             HelpText = "Media type describing the body.")]
         public string? MediaType { get; set; }
         
         [SeqAppSetting(InputType = SettingInputType.Password, IsOptional = true, DisplayName = "Authentication Header",
+            Syntax = "code",
             HelpText = "An optional `Name: Value` header, stored as sensitive data, for authentication purposes.")]
         public string? AuthenticationHeader { get; set; }
 
         [SeqAppSetting(InputType = SettingInputType.LongText, IsOptional = true, DisplayName = "Other Headers",
+            Syntax = "code",
             HelpText = "Additional headers to send with the request, one per line in `Name: Value` format.")]
         public string? OtherHeaders { get; set; }
         
