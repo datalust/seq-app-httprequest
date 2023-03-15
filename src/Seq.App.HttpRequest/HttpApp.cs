@@ -45,7 +45,7 @@ namespace Seq.App.HttpRequest
         public bool BodyIsTemplate { get; set; }
 
         [SeqAppSetting(IsOptional = true, DisplayName = "Media Type",
-            HelpText = "Media type describing the body.")]
+            HelpText = "Media type describing the body. Required if a body is specified.")]
         public string? MediaType { get; set; }
         
         [SeqAppSetting(InputType = SettingInputType.Password, IsOptional = true, DisplayName = "Authentication Header",
