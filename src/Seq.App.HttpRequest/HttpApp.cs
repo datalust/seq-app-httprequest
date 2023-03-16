@@ -51,7 +51,7 @@ namespace Seq.App.HttpRequest
 
         [SeqAppSetting(IsOptional = true, DisplayName = "Media Type",
             Syntax = "code",
-            HelpText = "Media type describing the body.")]
+            HelpText = "Media type describing the body. Required if a `Body` is specified.")]
         public string? MediaType { get; set; }
         
         [SeqAppSetting(InputType = SettingInputType.Password, IsOptional = true, DisplayName = "Authentication Header",
