@@ -1,5 +1,5 @@
 ﻿using System;
-using Seq.App.HttpRequest.Templates.Encoding;
+using Seq.Syntax.Templates.Encoding;
 
 namespace Seq.App.HttpRequest.Encoding
 {
