@@ -4,8 +4,7 @@ using System.IO;
 using System.Net.Http;
 using System.Text;
 using Seq.App.HttpRequest.Encoding;
-using Seq.App.HttpRequest.Expressions;
-using Seq.App.HttpRequest.Templates;
+using Seq.Syntax.Templates;
 using Serilog.Events;
 using Serilog.Formatting;
 
