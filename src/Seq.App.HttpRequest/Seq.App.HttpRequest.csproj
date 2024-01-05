@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Description>Send events and notifications from Seq to a remote HTTP/REST/WebHook endpoint.</Description>
-    <VersionPrefix>1.0.0</VersionPrefix>
+    <VersionPrefix>1.0.1</VersionPrefix>
     <Authors>Datalust, Serilog Contributors</Authors>
     <TargetFramework>net6.0</TargetFramework>
     <PackageTags>seq-app</PackageTags>
