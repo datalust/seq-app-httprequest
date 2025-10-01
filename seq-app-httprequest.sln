@@ -15,11 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sln", "sln", "{0F8E84A5-952
 ProjectSection(SolutionItems) = preProject
 	.gitattributes = .gitattributes
 	.gitignore = .gitignore
-	appveyor.yml = appveyor.yml
 	Build.ps1 = Build.ps1
 	LICENSE = LICENSE
 	README.md = README.md
 	Run.ps1 = Run.ps1
+	Directory.Build.props = Directory.Build.props
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "asset", "asset", "{AC60371C-2888-45BB-9770-2A690DEA80FA}"
